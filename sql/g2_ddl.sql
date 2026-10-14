@@ -1,0 +1,6 @@
+-- =====================================================
+-- Föy 03 / Görev 2 — 3NF şema (altı tablo)
+-- uyeler, telefonlar, egitmenler, salonlar, dersler, kayitlar
+-- Birincil ve yabancı anahtarları föydeki tabloya göre tanımlayın.
+-- Oluşturma sırasına dikkat!
+-- =====================================================

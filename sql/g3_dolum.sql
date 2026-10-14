@@ -1,0 +1,6 @@
+-- =====================================================
+-- Föy 03 / Görev 3 — Düz tablodan temiz şemaya veri taşıma
+-- INSERT INTO ... SELECT (DISTINCT) ile doldurun.
+-- Tutarsız ücretlerde kural: her ders için EN DÜŞÜK ücret esas alınır.
+-- Telefonlar için string_to_array + unnest kullanın (bkz. föy).
+-- =====================================================
