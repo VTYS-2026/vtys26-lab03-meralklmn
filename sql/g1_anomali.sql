@@ -5,10 +5,20 @@
 -- Kısa yorumunuzu sonuc/g1.txt dosyasına yazın.
 -- =====================================================
 
--- Soru 1.1
--- (Her eğitmen adının düz tabloda kaç satırda tekrar ettiği — çoktan aza)
+-- ==========================================
+-- GÖREV 1: Anomali Kanıtları ve Analizi
+-- ==========================================
+
+-- 1.1 Her eğitmen adının düz tabloda kaç satırda tekrar ettiğini listeleyin (Çoktan aza sıralı)
+-- (Eğitmen sütununun adının 'egitmen_adi' veya 'egitmen' olduğunu varsayıyoruz)
+SELECT egitmen_adi, COUNT(*) AS tekrar_sayisi
+FROM ders_tablosu -- Tablo adınızı kendi veritabanınıza göre güncelleyebilirsiniz
+GROUP BY egitmen_adi
+ORDER BY tekrar_sayisi DESC;
 
 
--- Soru 1.2
--- (Birden fazla FARKLI ücreti görünen derslerin ders_id'leri)
-
+-- 1.2 Birden fazla farklı ücreti görünen derslerin ders_id'lerini bulun
+SELECT ders_id
+FROM ders_tablosu
+GROUP BY ders_id
+HAVING COUNT(DISTINCT ucret) > 1;

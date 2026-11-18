@@ -1,0 +1,28 @@
+Eleştiri 1: Örnekte tabloda telefon numaraları noktalı virgül ile bölünmüştür ve tek sütunda verilmiştir. 1NF kuralı her hücrenin atomik olmasını ve ayrı bir tabloya taşınması gerektiğidir.
+
+Düzeltilmiş CREATE TABLE:
+```sql
+CREATE TABLE telefonlar (
+    telefon_id SERIAL PRIMARY KEY,
+    uye_id INT,
+    numara VARCHAR(20),
+    FOREIGN KEY (uye_id) REFERENCES uyeler(uye_id)
+);
+Düzeltilmiş CREATE TABLE:
+```sql
+CREATE TABLE telefonlar (
+    telefon_id SERIAL PRIMARY KEY,
+    uye_id INT,
+    numara VARCHAR(20),
+    FOREIGN KEY (uye_id) REFERENCES uyeler(uye_id)
+);
+
+Eleştiri 2:
+Model doğrudan dersler tablosuna salon kapasitesini koyarak geçişli bağımlılığa neden olmuş ve 3NF kuralını bozmuştur. Kapasite ayrı bir salonlar tablosunda tutulmalıdır.
+
+Düzeltilmiş CREATE TABLE:
+CREATE TABLE salonlar (
+    salon_id SERIAL PRIMARY KEY,
+    ad VARCHAR(100),
+    kapasite INT
+);

@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:16
-    container_name: vtys-postgres
+    container_name: vtys-postgres-lab03
     environment:
       POSTGRES_USER: vtys
       POSTGRES_PASSWORD: vtys2026
@@ -14,7 +14,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: vtys-pgadmin
+    container_name: vtys-pgadmin-lab03
     environment:
       PGADMIN_DEFAULT_EMAIL: ogrenci@firat.edu.tr
       PGADMIN_DEFAULT_PASSWORD: vtys2026
